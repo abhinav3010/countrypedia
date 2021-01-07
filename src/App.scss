@@ -1,0 +1,11 @@
+@import "./ui-variables.scss";
+
+.App {
+  background-color: $secondary-color;
+}
+
+.main-screen {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}

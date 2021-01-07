@@ -1,0 +1,19 @@
+@import "../ui-variables.scss";
+
+.search-bar {
+  display: flex;
+  padding: 10px;
+  min-width: 300px;
+  width: 40%;
+  box-shadow: 0px 0px 5px $shadow-color;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $primary-color;
+  align-items: center;
+  border-radius: 4px;
+}
+.search-field {
+  flex-grow: 1;
+  margin-left: 15px;
+  border: none;
+}

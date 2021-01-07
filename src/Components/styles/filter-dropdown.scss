@@ -1,0 +1,21 @@
+@import "../../ui-variables.scss";
+
+.filter-header {
+  display: flex;
+  min-width: 180px;
+  padding: 10px 10px 10px 20px;
+  justify-content: space-between;
+  background-color: $primary-color;
+  box-shadow: 0px 0px 5px $shadow-color;
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.dropdown-arrow {
+  cursor: pointer;
+}
+
+.active-filter {
+  cursor: default;
+}

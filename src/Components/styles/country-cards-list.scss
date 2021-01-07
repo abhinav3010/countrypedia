@@ -1,0 +1,7 @@
+.cards-list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: calc((100% - 1000px) / 4);
+}
