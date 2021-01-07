@@ -9,6 +9,7 @@
 }
 
 .back-btn {
+  cursor: pointer;
   display: flex;
   height: 35px;
   width: 120px;
@@ -65,6 +66,31 @@
         margin-bottom: 10px;
         .key {
           font-weight: 450;
+        }
+      }
+    }
+    .border-countries {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      .key {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      .border-country-link {
+        cursor: pointer;
+        font-size: 12px;
+        background-color: $primary-color;
+        padding: 5px 10px 5px 10px;
+        box-shadow: 0px 0px 5px $shadow-color;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        a {
+          text-decoration: none;
+          color: $text-color;
+          font-weight: 300;
         }
       }
     }

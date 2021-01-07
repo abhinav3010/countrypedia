@@ -3,29 +3,28 @@ import "./styles/country-card.scss";
 import { Link } from "react-router-dom";
 
 function CountryCard(props) {
+  const { country } = props;
+
+  const renderDetails = (key, value) => {
+    return (
+      <div>
+        <span className="key">{key}</span>
+        <span className="value">{value}</span>
+      </div>
+    );
+  };
+
   return (
-    <Link
-      to={`/${props.country.alpha3Code}`}
-      style={{ textDecoration: "none" }}
-    >
+    <Link to={`/${country.alpha3Code}`} style={{ textDecoration: "none" }}>
       <div className="card">
         <div className="flag-box">
-          <img src={props.country.flag} alt="" className="flag" />
+          <img src={country.flag} alt="" className="flag" />
         </div>
         <div className="country-details">
           <div className="country-name">{props.country.name}</div>
-          <div>
-            <span className="key">Population:</span>
-            <span className="value">{props.country.population}</span>
-          </div>
-          <div>
-            <span className="key">Region:</span>
-            <span className="value">{props.country.region}</span>
-          </div>
-          <div>
-            <span className="key">Capital:</span>
-            <span className="value">{props.country.capital}</span>
-          </div>
+          {renderDetails("Population", country.population)}
+          {renderDetails("Region:", country.region)}
+          {renderDetails("Capital:", country.capital)}
         </div>
       </div>
     </Link>

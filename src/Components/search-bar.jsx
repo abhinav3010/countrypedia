@@ -1,6 +1,6 @@
 import React from "react";
 import SearchIcon from "@material-ui/icons/Search";
-import "./search-bar.scss";
+import "./styles/search-bar.scss";
 
 function SearchBar(props) {
   return (

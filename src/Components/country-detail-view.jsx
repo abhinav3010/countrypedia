@@ -2,26 +2,31 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
 import "./styles/country-detail-view.scss";
+import { Link, withRouter } from "react-router-dom";
+
+const getCombinedString = (arr) => {
+  return arr.map((obj) => obj.name).join();
+};
+
+const getCountryByCode = (list, code) => {
+  return list.find(
+    (country) => country.alpha3Code.toLowerCase() === code.toLowerCase()
+  );
+};
 
 function CountryDetailView(props) {
   const { code } = useParams();
-  console.log("Abhinav", code);
+  console.log("Abhinav", props);
 
   if (!props.countryData) {
     return null;
   }
 
-  const country = props.countryData.find(
-    (country) => country.alpha3Code.toLowerCase() === code.toLowerCase()
-  );
+  const country = getCountryByCode(props.countryData, code);
 
   if (!country) {
     return <div>No Such Country with that code exists! Check the Code</div>;
   }
-
-  const getCombinedString = (arr) => {
-    return arr.map((obj) => obj.name).join();
-  };
 
   const renderProp = (key, value) => {
     return (
@@ -32,10 +37,22 @@ function CountryDetailView(props) {
     );
   };
 
+  const renderBorderCountryLink = (code) => {
+    const borderCountry = getCountryByCode(props.countryData, code);
+    return (
+      <div className="border-country-link" key={code}>
+        <Link to={`/${code}`}>{borderCountry.name}</Link>
+      </div>
+    );
+  };
+  const goBack = () => {
+    props.history.goBack();
+  };
+
   return (
     <div className="country-detail-view">
       <div className="back-btn-area">
-        <div className="back-btn">
+        <div className="back-btn" onClick={goBack}>
           <KeyboardBackspaceIcon
             fontSize="small"
             style={{ color: "#4d4d4d" }}
@@ -58,10 +75,14 @@ function CountryDetailView(props) {
             {renderProp("Sub Region:", country.subregion)}
             {renderProp("Capital:", country.capital)}
           </div>
+          <div className="border-countries">
+            <div className="key">Border Countries:</div>
+            {country.borders.map((code) => renderBorderCountryLink(code))}
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default CountryDetailView;
+export default withRouter(CountryDetailView);

@@ -1,6 +1,6 @@
 import React from "react";
 import NightsStayOutlinedIcon from "@material-ui/icons/NightsStayOutlined";
-import "./navbar.scss";
+import "./styles/navbar.scss";
 
 function Navbar() {
   return (
