@@ -4,13 +4,16 @@ import "./styles/search-bar.scss";
 
 function SearchBar(props) {
   return (
-    <div className="search-bar">
+    <div className={`search-bar${props.theme === "dark" ? " dark" : ""}`}>
       <div className="search-icon">
-        <SearchIcon style={{ color: "#a3a3a3" }} fontSize="small" />
+        <SearchIcon
+          style={{ color: props.theme === "dark" ? "white" : "#a3a3a3" }}
+          fontSize="small"
+        />
       </div>
       <input
         type="text"
-        className="search-field"
+        className={`search-field${props.theme === "dark" ? " dark" : ""}`}
         placeholder="Search for a country..."
         onChange={props.onInputChange}
       />

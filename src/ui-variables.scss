@@ -3,3 +3,13 @@ $secondary-color: hsl(0, 0%, 98%);
 $shadow-color: #dedede;
 $focus-background: #ededed;
 $text-color: black;
+
+@mixin dark-primary {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+@mixin dark-secondary {
+  background-color: hsl(207, 26%, 17%);
+  color: white;
+}

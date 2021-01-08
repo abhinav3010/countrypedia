@@ -11,9 +11,15 @@
   background-color: $primary-color;
   align-items: center;
   border-radius: 4px;
+  &.dark {
+    @include dark-primary();
+  }
 }
 .search-field {
   flex-grow: 1;
   margin-left: 15px;
   border: none;
+  &.dark {
+    @include dark-primary();
+  }
 }

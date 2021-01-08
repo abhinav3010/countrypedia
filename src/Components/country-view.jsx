@@ -36,7 +36,7 @@ function CountryView(props) {
   return (
     <div className="country-view">
       <div className="action-bar">
-        <SearchBar onInputChange={onSearchInputChange} />
+        <SearchBar onInputChange={onSearchInputChange} theme={props.theme} />
         <FilterDropdown
           selectedFilter={activeFilter}
           onSelectFilter={(filter) => setActiveFilter(filter)}
