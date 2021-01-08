@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/countrypedia/static/css/main.06b3e6ff.chunk.css",
+    "main.js": "/countrypedia/static/js/main.67be3665.chunk.js",
+    "main.js.map": "/countrypedia/static/js/main.67be3665.chunk.js.map",
+    "runtime-main.js": "/countrypedia/static/js/runtime-main.511904e2.js",
+    "runtime-main.js.map": "/countrypedia/static/js/runtime-main.511904e2.js.map",
+    "static/js/2.7eea12a4.chunk.js": "/countrypedia/static/js/2.7eea12a4.chunk.js",
+    "static/js/2.7eea12a4.chunk.js.map": "/countrypedia/static/js/2.7eea12a4.chunk.js.map",
+    "index.html": "/countrypedia/index.html",
+    "static/css/main.06b3e6ff.chunk.css.map": "/countrypedia/static/css/main.06b3e6ff.chunk.css.map",
+    "static/js/2.7eea12a4.chunk.js.LICENSE.txt": "/countrypedia/static/js/2.7eea12a4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.511904e2.js",
+    "static/js/2.7eea12a4.chunk.js",
+    "static/css/main.06b3e6ff.chunk.css",
+    "static/js/main.67be3665.chunk.js"
+  ]
+}
