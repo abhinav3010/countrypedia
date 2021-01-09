@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/countrypedia/static/css/main.ce459a8e.chunk.css",
-    "main.js": "/countrypedia/static/js/main.a5313667.chunk.js",
-    "main.js.map": "/countrypedia/static/js/main.a5313667.chunk.js.map",
+    "main.css": "/countrypedia/static/css/main.2262a4b9.chunk.css",
+    "main.js": "/countrypedia/static/js/main.f1df07a3.chunk.js",
+    "main.js.map": "/countrypedia/static/js/main.f1df07a3.chunk.js.map",
     "runtime-main.js": "/countrypedia/static/js/runtime-main.511904e2.js",
     "runtime-main.js.map": "/countrypedia/static/js/runtime-main.511904e2.js.map",
-    "static/js/2.3b3b21c3.chunk.js": "/countrypedia/static/js/2.3b3b21c3.chunk.js",
-    "static/js/2.3b3b21c3.chunk.js.map": "/countrypedia/static/js/2.3b3b21c3.chunk.js.map",
+    "static/js/2.aecd41d1.chunk.js": "/countrypedia/static/js/2.aecd41d1.chunk.js",
+    "static/js/2.aecd41d1.chunk.js.map": "/countrypedia/static/js/2.aecd41d1.chunk.js.map",
     "index.html": "/countrypedia/index.html",
-    "static/css/main.ce459a8e.chunk.css.map": "/countrypedia/static/css/main.ce459a8e.chunk.css.map",
-    "static/js/2.3b3b21c3.chunk.js.LICENSE.txt": "/countrypedia/static/js/2.3b3b21c3.chunk.js.LICENSE.txt"
+    "static/css/main.2262a4b9.chunk.css.map": "/countrypedia/static/css/main.2262a4b9.chunk.css.map",
+    "static/js/2.aecd41d1.chunk.js.LICENSE.txt": "/countrypedia/static/js/2.aecd41d1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.511904e2.js",
-    "static/js/2.3b3b21c3.chunk.js",
-    "static/css/main.ce459a8e.chunk.css",
-    "static/js/main.a5313667.chunk.js"
+    "static/js/2.aecd41d1.chunk.js",
+    "static/css/main.2262a4b9.chunk.css",
+    "static/js/main.f1df07a3.chunk.js"
   ]
 }
