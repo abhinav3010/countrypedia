@@ -1,9 +1,10 @@
 @import "./ui-variables.scss";
 
 .main-screen {
+  margin-top: 6px;
   position: relative;
   background-color: $secondary-color;
-  padding-top: 50px;
+  padding-top: 40px;
   display: flex;
   justify-content: center;
   &.dark {

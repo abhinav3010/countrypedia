@@ -40,8 +40,18 @@ function CountryDetailView(props) {
   const renderBorderCountryLink = (code) => {
     const borderCountry = getCountryByCode(props.countryData, code);
     return (
-      <div className="border-country-link" key={code}>
-        <Link to={`/${code}`}>{borderCountry.name}</Link>
+      <div
+        className={`border-country-link${
+          props.theme === "dark" ? " dark" : ""
+        }`}
+        key={code}
+      >
+        <Link
+          to={`/${code}`}
+          style={{ color: props.theme === "dark" ? "white" : "black" }}
+        >
+          {borderCountry.name}
+        </Link>
       </div>
     );
   };
@@ -52,10 +62,13 @@ function CountryDetailView(props) {
   return (
     <div className="country-detail-view">
       <div className="back-btn-area">
-        <div className="back-btn" onClick={goBack}>
+        <div
+          className={`back-btn${props.theme === "dark" ? " dark" : ""}`}
+          onClick={goBack}
+        >
           <KeyboardBackspaceIcon
             fontSize="small"
-            style={{ color: "#4d4d4d" }}
+            style={{ color: props.theme === "dark" ? "white" : "#4d4d4d" }}
           />
           <div className="btn-text">Back</div>
         </div>

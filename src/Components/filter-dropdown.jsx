@@ -8,6 +8,7 @@ import { useState } from "react";
 function FilterDropdown(props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState(props.selectedFilter);
+  const { theme } = props;
   const createMenuItem = (text) => {
     return {
       selectedText: text,
@@ -38,7 +39,7 @@ function FilterDropdown(props) {
   };
   return (
     <div className="filter-dropdown">
-      <div className="filter-header">
+      <div className={`filter-header${theme === "dark" ? " dark" : ""}`}>
         <div className="selected-filter">
           <div className="active-filter">{renderSelectedFilter()}</div>
         </div>
@@ -56,6 +57,7 @@ function FilterDropdown(props) {
           renderItemContent={renderItemContent}
           onSelect={onItemSelect}
           selectedItem={selectedFilter}
+          theme={theme}
         />
       ) : null}
     </div>

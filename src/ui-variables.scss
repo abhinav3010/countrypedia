@@ -3,6 +3,7 @@ $secondary-color: hsl(0, 0%, 98%);
 $shadow-color: #dedede;
 $focus-background: #ededed;
 $text-color: black;
+$shadow-color-dark: #002329;
 
 @mixin dark-primary {
   background-color: hsl(209, 23%, 22%);

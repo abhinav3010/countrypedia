@@ -5,11 +5,11 @@
   justify-content: space-between;
   background-color: $primary-color;
   padding: 25px 60px 25px 60px;
-  box-shadow: 0px 5px 5px $shadow-color;
+  box-shadow: 0px 3px 3px $shadow-color;
 
   &.dark {
     @include dark-primary();
-    box-shadow: 0px 5px 5px black;
+    box-shadow: 0px 1px 1px $shadow-color-dark;
   }
 }
 

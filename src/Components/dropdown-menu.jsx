@@ -16,7 +16,7 @@ function DropdownMenu(props) {
       .map((item, index) => {
         return (
           <div
-            className="item"
+            className={`item${props.theme === "dark" ? " dark-item" : ""}`}
             key={index}
             onClick={() => {
               setSelectedItem(item);
@@ -28,7 +28,11 @@ function DropdownMenu(props) {
         );
       });
   };
-  return <div className="menu">{renderMenuContent()}</div>;
+  return (
+    <div className={`menu${props.theme === "dark" ? " dark" : ""}`}>
+      {renderMenuContent()}
+    </div>
+  );
 }
 
 export default DropdownMenu;

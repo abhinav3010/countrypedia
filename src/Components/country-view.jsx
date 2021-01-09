@@ -40,9 +40,13 @@ function CountryView(props) {
         <FilterDropdown
           selectedFilter={activeFilter}
           onSelectFilter={(filter) => setActiveFilter(filter)}
+          theme={props.theme}
         />
       </div>
-      <CountryCardList countryList={getSearchResults(props.countryData)} />
+      <CountryCardList
+        countryList={getSearchResults(props.countryData)}
+        theme={props.theme}
+      />
     </div>
   );
 }

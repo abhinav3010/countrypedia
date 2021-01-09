@@ -7,7 +7,7 @@ function CountryCardList(props) {
     return props.countryList.map((country) => {
       return (
         <div className="card-layout" key={country.name}>
-          <CountryCard country={country} />
+          <CountryCard country={country} theme={props.theme} />
         </div>
       );
     });

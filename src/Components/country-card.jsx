@@ -16,11 +16,13 @@ function CountryCard(props) {
 
   return (
     <Link to={`/${country.alpha3Code}`} style={{ textDecoration: "none" }}>
-      <div className="card">
+      <div className={`card${props.theme === "dark" ? " dark" : ""}`}>
         <div className="flag-box">
           <img src={country.flag} alt="" className="flag" />
         </div>
-        <div className="country-details">
+        <div
+          className={`country-details${props.theme === "dark" ? " dark" : ""}`}
+        >
           <div className="country-name">{props.country.name}</div>
           {renderDetails("Population", country.population)}
           {renderDetails("Region:", country.region)}
