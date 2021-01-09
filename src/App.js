@@ -5,9 +5,13 @@ import CountryView from "./Components/country-view.jsx";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import CountryDetailView from "./Components/country-detail-view";
 
+const getThemeFromLocalStorage = () => {
+  return localStorage.theme ?? "light";
+};
+
 function App() {
   const [countryData, setCountryData] = useState([]);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(getThemeFromLocalStorage());
   useEffect(() => {
     const apiUrl = "https://restcountries.eu/rest/v2/all";
     fetch(apiUrl)
@@ -21,6 +25,7 @@ function App() {
     } else {
       document.body.classList.remove("dark");
     }
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (

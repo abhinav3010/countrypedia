@@ -5,10 +5,10 @@
 
 .back-btn-area {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
-.back-btn {
+.redirect-btn {
   cursor: pointer;
   display: flex;
   height: 35px;

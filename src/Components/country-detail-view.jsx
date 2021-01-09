@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
+import HomeIcon from "@material-ui/icons/Home";
 import "./styles/country-detail-view.scss";
 import { Link, withRouter } from "react-router-dom";
 
@@ -40,38 +41,66 @@ function CountryDetailView(props) {
   const renderBorderCountryLink = (code) => {
     const borderCountry = getCountryByCode(props.countryData, code);
     return (
-      <div
-        className={`border-country-link${
-          props.theme === "dark" ? " dark" : ""
-        }`}
+      <Link
+        to={`/${code}`}
+        style={{
+          color: props.theme === "dark" ? "white" : "black",
+        }}
         key={code}
       >
-        <Link
-          to={`/${code}`}
-          style={{ color: props.theme === "dark" ? "white" : "black" }}
+        <div
+          className={`border-country-link${
+            props.theme === "dark" ? " dark" : ""
+          }`}
         >
           {borderCountry.name}
-        </Link>
-      </div>
+        </div>
+      </Link>
     );
   };
   const goBack = () => {
     props.history.goBack();
   };
 
+  const renderButton = (onClick, ImgComponent, buttonText) => {
+    return (
+      <div
+        className={`redirect-btn${props.theme === "dark" ? " dark" : ""}`}
+        onClick={onClick}
+      >
+        <ImgComponent
+          fontSize="small"
+          style={{ color: props.theme === "dark" ? "white" : "#4d4d4d" }}
+        />
+        <div className="btn-text">{buttonText}</div>
+      </div>
+    );
+  };
+
+  const renderBorderCountries = () => {
+    if (country.borders.length === 0) {
+      return null;
+    }
+    return (
+      <div className="border-countries">
+        <div className="key">Border Countries:</div>
+        {country.borders.map((code) => renderBorderCountryLink(code))}
+      </div>
+    );
+  };
+
   return (
     <div className="country-detail-view">
       <div className="back-btn-area">
-        <div
-          className={`back-btn${props.theme === "dark" ? " dark" : ""}`}
-          onClick={goBack}
+        {renderButton(goBack, KeyboardBackspaceIcon, "Back")}
+        <Link
+          to="/"
+          style={{
+            color: props.theme === "dark" ? "white" : "black",
+          }}
         >
-          <KeyboardBackspaceIcon
-            fontSize="small"
-            style={{ color: props.theme === "dark" ? "white" : "#4d4d4d" }}
-          />
-          <div className="btn-text">Back</div>
-        </div>
+          {renderButton(null, HomeIcon, "Home")}
+        </Link>
       </div>
       <div className="card-details-area">
         <div className="flag-box">
@@ -88,10 +117,7 @@ function CountryDetailView(props) {
             {renderProp("Sub Region:", country.subregion)}
             {renderProp("Capital:", country.capital)}
           </div>
-          <div className="border-countries">
-            <div className="key">Border Countries:</div>
-            {country.borders.map((code) => renderBorderCountryLink(code))}
-          </div>
+          {renderBorderCountries()}
         </div>
       </div>
     </div>
