@@ -23,3 +23,9 @@
 .active-filter {
   cursor: default;
 }
+
+@media only screen and (max-width: 420px) {
+  .filter-header {
+    margin-top: 8px;
+  }
+}

@@ -24,3 +24,16 @@
     @include dark-primary();
   }
 }
+
+@media only screen and (max-width: 540px) {
+  .search-bar {
+    min-width: 240px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .search-bar {
+    min-width: 240px;
+    width: 100%;
+  }
+}

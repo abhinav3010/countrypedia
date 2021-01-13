@@ -32,3 +32,16 @@
   height: 15px;
   width: 15px;
 }
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding: 20px 25px 20px 25px;
+  }
+  .heading-text {
+    font-weight: 800;
+    font-size: 16px;
+  }
+  .secondary-text {
+    display: none;
+  }
+}
